@@ -1,0 +1,9 @@
+{
+  "name": "cyberguard-ai-mongodb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CyberGuard AI complaint registration and tracking with MongoDB Atlas",
+  "scripts": {"dev": "vercel dev"},
+  "dependencies": {"cookie-parser": "^1.4.7", "express": "^5.1.0", "express-rate-limit": "^8.1.0", "jsonwebtoken": "^9.0.2", "mongodb": "^6.19.0"},
+  "devDependencies": {"vercel": "^41.7.0"}
+}

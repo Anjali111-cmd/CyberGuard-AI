@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CyberGuard AI | Smart Cyber Complaint System</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="/">🛡️ CyberGuard <span>AI</span></a>
+  <nav><a href="#report">Report</a><a href="#track">Track</a><a href="/login.html">Admin</a></nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <small>SMART CYBER COMPLAINT REGISTRATION</small>
+      <h1>Report cyber crime.<br><em>Take back control.</em></h1>
+      <p>Describe what happened, attach screenshots, and track your complaint.</p>
+      <a class="btn" href="#report">Start a report</a>
+    </div>
+    <div class="hero-shield" aria-hidden="true">🛡️</div>
+  </section>
+
+  <section id="report" class="section">
+    <h2>Register a complaint</h2>
+    <p class="muted centered">Do not enter passwords, OTPs, PINs, or other secret credentials.</p>
+
+    <form id="complaintForm" class="panel">
+      <label for="complaint">What happened?</label>
+      <textarea id="complaint" maxlength="2000" minlength="10" required
+        placeholder="Explain the incident in your own words..."></textarea>
+      <div class="field-meta"><small id="charCount">0 / 2000</small></div>
+
+      <div class="voice-box">
+        <div>
+          <strong>🎙️ Voice assistant</strong>
+          <p class="muted small">Speak your complaint and we’ll add the words to the text box.</p>
+        </div>
+        <div class="voice-actions">
+          <button type="button" class="btn secondary" id="voiceBtn">🎙️ Speak complaint</button>
+          <button type="button" class="btn outline" id="readBtn">🔊 Read instructions</button>
+        </div>
+        <p id="voiceStatus" class="small" aria-live="polite">Voice input is ready when supported by your browser.</p>
+      </div>
+
+      <label for="evidence">Upload evidence screenshots (optional)</label>
+      <input id="evidence" type="file" accept="image/*" multiple>
+      <small class="muted">Select up to 3 screenshots. Preview appears below. Avoid uploading sensitive information.</small>
+      <div id="preview" class="evidence-grid"></div>
+
+      <button class="btn submit-btn" type="submit">Submit complaint</button>
+      <p id="formMessage" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <section id="track" class="section">
+    <h2>Track your complaint</h2>
+    <form id="trackForm" class="track">
+      <input id="trackId" required placeholder="Enter your ID, e.g. CG-ABC12345">
+      <button class="btn" type="submit">Track complaint</button>
+    </form>
+    <div id="trackResult" class="panel hidden" aria-live="polite"></div>
+  </section>
+
+  <section class="section info">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div><b>01</b><h3>Report</h3><p>Describe the incident and add evidence screenshots.</p></div>
+      <div><b>02</b><h3>Automatic analysis</h3><p>Keyword rules suggest a category and priority.</p></div>
+      <div><b>03</b><h3>Track</h3><p>Use your complaint ID to check its current status.</p></div>
+    </div>
+    <p class="muted centered">This is a college project prototype, not an official reporting portal. In India, visit
+      <a href="https://cybercrime.gov.in/" target="_blank" rel="noopener">cybercrime.gov.in</a>
+      or call 1930 for urgent financial cyber fraud.</p>
+  </section>
+</main>
+<footer>© 2026 CyberGuard AI · College mini project</footer>
+<script src="/script.js" defer></script>
+</body>
+</html>
